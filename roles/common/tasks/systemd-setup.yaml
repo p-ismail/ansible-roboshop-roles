@@ -1,6 +1,6 @@
   - name: copy the {{ component }} service file
     ansible.builtin.template:
-      src: "{{ component }}.service.j2 " #here j2 is jinja 2
+      src: "{{ component }}.service.j2" #here j2 is jinja 2
       dest: " /etc/systemd/system/{{ component }}.service "
     notify: restart "{{ component }}"
 
